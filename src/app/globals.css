@@ -3,25 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-gold: #D4AF37;
+  --color-gold-50: #FBF8ED;
+  --color-gold-100: #F6F0D6;
+  --color-gold-200: #EEE1AD;
+  --color-gold-300: #E5D285;
+  --color-gold-400: #DDC35C;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #B8932A;
+  --color-gold-700: #8C7020;
+  --color-gold-800: #604D16;
+  --color-gold-900: #342A0C;
+  
+  --color-navy: #1E3A5F;
+  --color-navy-50: #E8EDF3;
+  --color-navy-100: #C6D3E3;
+  --color-navy-200: #9BB0CA;
+  --color-navy-300: #708DB1;
+  --color-navy-400: #456A98;
+  --color-navy-500: #1E3A5F;
+  --color-navy-600: #192F4D;
+  --color-navy-700: #14253B;
+  --color-navy-800: #0F1A29;
+  --color-navy-900: #0A0F17;
+  
+  --color-cream: #FFFEF7;
+  --color-cream-50: #FFFFFF;
+  --color-cream-100: #FFFEF7;
+  --color-cream-200: #FEFCE8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-navy);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
 }
