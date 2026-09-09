@@ -134,7 +134,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Church support message */}
+        {/* Operator identity */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -142,7 +142,7 @@ export default function Pricing() {
           transition={{ delay: 0.5 }}
           className="text-center text-white/40 text-sm mt-12"
         >
-          Proceeds support new church plants worldwide
+          Operated by Abundant Life Church
         </motion.p>
       </div>
     </section>

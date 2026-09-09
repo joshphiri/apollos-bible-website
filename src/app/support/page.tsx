@@ -62,7 +62,7 @@ export default function SupportPage() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-6">
             <a
-              href="mailto:support@apollosbible.com"
+              href="mailto:support@apolloslifebible.com"
               className="flex items-center p-6 bg-cream-100 rounded-xl hover:shadow-lg transition-shadow"
             >
               <div className="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center mr-4">
@@ -70,7 +70,7 @@ export default function SupportPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-navy-500">Email Support</h3>
-                <p className="text-gray-600">support@apollosbible.com</p>
+                <p className="text-gray-600">support@apolloslifebible.com</p>
               </div>
             </a>
             

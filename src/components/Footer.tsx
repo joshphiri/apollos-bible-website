@@ -102,7 +102,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Apollos Bible. All rights reserved.
           </p>
           <p className="text-navy/30 text-xs">
-            Proceeds support new church plants worldwide
+            Operated by Abundant Life Church
           </p>
         </div>
       </div>
