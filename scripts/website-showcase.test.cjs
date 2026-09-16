@@ -8,12 +8,11 @@ const read = file => fs.readFileSync(path.join(root, file), "utf8");
 const digest = file => crypto.createHash("sha256").update(fs.readFileSync(path.join(root, file))).digest("hex").toUpperCase();
 const textDigest = file => crypto.createHash("sha256").update(read(file).replace(/\r\n/g, "\n")).digest("hex").toUpperCase();
 
-test("authentication, legal documents, share metadata and dependencies are untouched", () => {
+test("authentication, terms, share metadata and dependencies are untouched", () => {
   const identities = {
     "src/components/AuthRedirect.tsx": "A603D54C9B2E993E0AF7EF610305350C831718A0DC9C0E63BC3235EA911C27FE",
     "src/app/reset-password/page.tsx": "BFD059373EF955B5648E54F6AAA85E688E2A04E1A3BC1DD31A9A3813C31516BB",
     "src/app/auth/confirmed/page.tsx": "1D2E8B94365C8FB926749A1A587E6B6C6CB92B66743BE4C10D9DF18ACAA44DCA",
-    "src/app/privacy/page.tsx": "0A9E1DFAC7BE2B3A3287A7464AC11D4E8612EA70CD76F0CE67D328002074C69A",
     "src/app/terms/page.tsx": "01700B13BC5BAB444F56A57EA5D37DB60A07F7B1BF273A3B61C878574B9F524C",
     "package-lock.json": "013F9B7F84309BE618EDBF82E976538D7A9246C03895E4636DF50163A990F344",
     "src/app/page.tsx": "79F0B272EE54F175DFF4A6919B56FA0FEDA19014E9B454075827DB9C39D41D9B",
@@ -21,6 +20,37 @@ test("authentication, legal documents, share metadata and dependencies are untou
   };
   // Ignore platform line endings; these hashes pin the existing released source.
   for (const [file, hash] of Object.entries(identities)) assert.equal(textDigest(file), hash, file);
+});
+
+const sermonStorageCopy = "Original sermon audio is stored on your phone. When you transcribe a recording, a temporary cloud copy is used for processing. Once processing succeeds and the transcript and summary are safely saved, the temporary audio copy becomes eligible for automatic cleanup after 24 hours. Failed or unfinished processing copies are retained to support retry. Your saved transcripts and summaries remain in your account and can be restored when you sign in on another device. Original audio is not restored from the cloud.";
+const normalized = value => value.replace(/\r\n/g, "\n");
+const textHash = value => crypto.createHash("sha256").update(value).digest("hex");
+
+test("privacy adds only the approved sermon-storage disclosure and updated date", () => {
+  const privacy = normalized(read("src/app/privacy/page.tsx"));
+  const start = privacy.indexOf('            <p className="mb-4">\n              Original sermon audio is stored on your phone.');
+  const end = privacy.indexOf('            <p className="mb-4">\n              We keep account and synced app data', start);
+  assert.ok(start >= 0 && end > start);
+  const addition = privacy.slice(start, end).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  assert.equal(addition, sermonStorageCopy);
+  assert.ok(privacy.includes("Last updated: September 17, 2026"));
+  const original = (privacy.slice(0, start) + privacy.slice(end)).replace("Last updated: September 17, 2026", "Last updated: August 18, 2026");
+  assert.equal(textHash(original), "0a9e1dfac7be2b3a3287a7464ac11d4e8612ea70cd76f0ce67d328002074c69a");
+});
+
+test("support adds the same sermon-storage answer without changing existing FAQs or layout", () => {
+  const support = normalized(read("src/app/support/page.tsx"));
+  const addition = '  {\n    question: "Where are my sermon recordings, transcripts and summaries stored?",\n    answer: "' + sermonStorageCopy + '",\n  },\n';
+  assert.ok(support.includes(addition));
+  assert.equal(textHash(support.replace(addition, "")), "5cb2ec5eb09641ada827da95de0bba16f30873af39dc5a7fc51cf424628e7ed7");
+});
+
+test("cleanup wording preserves successful-only eligibility, retry and saved cloud text", () => {
+  for (const file of ["src/app/privacy/page.tsx", "src/app/support/page.tsx"]) {
+    const content = read(file).replace(/\s+/g, " ");
+    for (const phrase of ["Once processing succeeds", "transcript and summary are safely saved", "eligible for automatic cleanup after 24 hours", "Failed or unfinished processing copies are retained to support retry", "transcripts and summaries remain in your account", "Original audio is not restored from the cloud"]) assert.ok(content.includes(phrase), file + ": " + phrase);
+    assert.doesNotMatch(content, /deleted (?:exactly|within) 24 hours/i);
+  }
 });
 test("the approved tour starts with Home and uses publication-ready captures", () => {
   const slides = read("src/components/showcaseSlides.ts");

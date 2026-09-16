@@ -16,7 +16,7 @@ export default function PrivacyPage() {
           Legal
         </p>
         <h1 className="text-4xl font-bold text-navy-500 mb-4">Privacy Policy</h1>
-        <p className="text-gray-600 mb-8">Last updated: August 18, 2026</p>
+        <p className="text-gray-600 mb-8">Last updated: September 17, 2026</p>
 
         <div className="prose prose-lg max-w-none text-navy-600">
           <section className="mb-8">
@@ -106,6 +106,19 @@ export default function PrivacyPage() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-navy-500 mb-4">6. Storage and Retention</h2>
+            <p className="mb-4">
+              Original sermon audio is stored on your phone. When you transcribe a recording,
+              a temporary cloud copy is used for processing.
+            </p>
+            <p className="mb-4">
+              Once processing succeeds and the transcript and summary are safely saved, the
+              temporary audio copy becomes eligible for automatic cleanup after 24 hours.
+              Failed or unfinished processing copies are retained to support retry.
+            </p>
+            <p className="mb-4">
+              Your saved transcripts and summaries remain in your account and can be restored
+              when you sign in on another device. Original audio is not restored from the cloud.
+            </p>
             <p className="mb-4">
               We keep account and synced app data while your account is active or as needed to
               provide the app. Some deleted information may remain for a limited time in backups,

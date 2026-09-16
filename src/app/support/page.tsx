@@ -25,6 +25,10 @@ const faqs = [
     answer: "Open Sermon Transcriber and choose Record New Sermon. With recording access and an internet connection for processing, a saved recording can be transcribed and summarised.",
   },
   {
+    question: "Where are my sermon recordings, transcripts and summaries stored?",
+    answer: "Original sermon audio is stored on your phone. When you transcribe a recording, a temporary cloud copy is used for processing. Once processing succeeds and the transcript and summary are safely saved, the temporary audio copy becomes eligible for automatic cleanup after 24 hours. Failed or unfinished processing copies are retained to support retry. Your saved transcripts and summaries remain in your account and can be restored when you sign in on another device. Original audio is not restored from the cloud.",
+  },
+  {
     question: "What's included in Apollos Pro?",
     answer: "Apollos Pro includes Voice Bible, Ask Apollos, sermon transcription and summaries, and chapter summaries. Paid allowances include 20 Voice Minutes and 480 sermon-transcription minutes per month. Subscription options and local pricing are shown in the app before you subscribe.",
   },
