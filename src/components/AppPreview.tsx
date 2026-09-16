@@ -5,30 +5,30 @@ import Image from "next/image";
 
 const screenshots = [
   {
-    src: "/images/screenshots/home-screen.jpg",
-    title: "Home Dashboard",
-    description: "Quick access to all features",
+    src: "/showcase/assets/home.jpg",
+    title: "Your Home",
+    description: "Continue reading and discover a daily verse",
   },
   {
-    src: "/images/screenshots/bible-reader.jpg",
-    title: "Bible Reader",
-    description: "Multiple translations with search",
+    src: "/showcase/assets/voice.png",
+    title: "Voice Bible",
+    description: "Your voice and saved Scripture chapters",
   },
   {
-    src: "/images/screenshots/sermons.jpg",
+    src: "/showcase/assets/sermons.jpg",
     title: "Sermon Transcriber",
-    description: "Record and transcribe automatically",
+    description: "Revisit a sermon and its key points",
   },
   {
-    src: "/images/screenshots/welcome.jpg",
-    title: "Welcome Screen",
-    description: "Everything to grow in God's Word",
+    src: "/showcase/assets/verse.jpg",
+    title: "Verse Cards",
+    description: "Save and share a meaningful verse",
   },
 ];
 
 export default function AppPreview() {
   return (
-    <section className="py-20 bg-navy overflow-hidden">
+    <section id="app-preview" className="py-20 bg-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,16 +36,16 @@ export default function AppPreview() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy mb-4">
             See It In Action
           </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Beautiful, intuitive design that makes Bible study a joy
+          <p className="text-lg text-navy/70 max-w-2xl mx-auto">
+            Real Apollos screens. Swipe or scroll across to explore.
           </p>
         </motion.div>
 
         {/* Screenshot carousel */}
-        <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+        <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory" tabIndex={0} role="region" aria-label="Apollos screenshot gallery">
           {screenshots.map((screenshot, index) => (
             <motion.div
               key={screenshot.src}
@@ -59,22 +59,21 @@ export default function AppPreview() {
                 {/* Phone frame */}
                 <div className="w-[240px] sm:w-[280px] bg-gray-800 rounded-[2.5rem] p-2 shadow-2xl">
                   <div className="relative w-full h-[480px] sm:h-[560px] rounded-[2rem] overflow-hidden bg-black">
-                    {/* Notch */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-gray-800 rounded-b-xl z-10" />
+                    {/* Real screenshots remain unaltered; do not add a fake notch. */}
                     
                     <Image
                       src={screenshot.src}
                       alt={screenshot.title}
                       fill
-                      className="object-cover object-top"
+                      className="object-contain" sizes="(max-width: 640px) 240px, 280px"
                     />
                   </div>
                 </div>
 
                 {/* Label */}
                 <div className="mt-4 text-center">
-                  <h3 className="font-semibold text-white">{screenshot.title}</h3>
-                  <p className="text-sm text-white/60">{screenshot.description}</p>
+                  <h3 className="font-semibold text-navy">{screenshot.title}</h3>
+                  <p className="text-sm text-navy/70">{screenshot.description}</p>
                 </div>
               </div>
             </motion.div>

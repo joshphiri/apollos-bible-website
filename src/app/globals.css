@@ -35,6 +35,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -45,4 +46,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair), serif;
+}
+
+/* Keep section destinations clear of the existing fixed navigation. */
+section[id], #download { scroll-margin-top: 0; }
+a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
+  outline: 3px solid #8C7020;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }

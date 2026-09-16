@@ -1,0 +1,14 @@
+node_modules
+.next
+.vercel
+.git
+.env*
+*.tsbuildinfo
+*.log
+*.pem
+*.key
+*.p12
+README.md
+ROADMAP.md
+public/showcase/README.md
+scripts

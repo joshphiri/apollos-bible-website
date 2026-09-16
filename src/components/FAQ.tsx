@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "What Bible translations are available?",
-    answer: "The reading library offers NIV, AMP, WEB, and KJV. Choose a translation in the Bible reader. WEB is available offline; other translations need an internet connection.",
+    answer: "Apollos supports NIV, KJV, WEB and AMP. Switch translations in the Bible reader.",
   },
   {
     question: "How does Ask Apollos work?",
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Is my data private and secure?",
-    answer: "Some features send questions, voice recordings, or sermon audio to service providers so they can respond, generate narration, or transcribe. Read our Privacy Policy for details about collection, processing, storage, and account deletion. Avoid including sensitive personal information in questions or recordings.",
+    answer: "Apollos uses service providers to deliver account sync, voice generation, transcription and other features. For what is collected, processed and retained, read our Privacy Policy.",
   },
   {
     question: "Can I use Apollos Bible offline?",
@@ -23,11 +23,11 @@ const faqs = [
   },
   {
     question: "What makes Apollos different from other Bible apps?",
-    answer: "Read Scripture, explore questions with Ask Apollos, hear the Bible in your own voice with Voice Bible, and revisit sermons through transcripts and summaries. Reading plans, a personal journal, bookmarks, and memory flashcards support your daily study.",
+    answer: "Voice Bible lets you hear supported chapters narrated in your own cloned voice. Apollos also brings together reading, dramatised audio, Bible questions, sermon transcripts, journaling and verse cards.",
   },
   {
     question: "Can I cancel my subscription anytime?",
-    answer: "Manage or cancel your iPhone subscription in your Apple Account subscription settings. Access continues for the remaining subscription period. See the renewal terms Apple presents before you subscribe.",
+    answer: "Manage or cancel your Apollos Pro subscription through your Apple account settings. After cancellation, access normally continues until the current period ends. A trial that renews becomes Pro; when it ends without an active subscription, the app uses the Free Plan.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function FAQ() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">
-            Frequently Asked <span className="text-gold">Questions</span>
+            Frequently Asked <span className="text-gold-700">Questions</span>
           </h2>
           <p className="text-lg text-navy/60">
             Got questions? We&apos;ve got answers.
@@ -64,6 +64,8 @@ export default function FAQ() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
             >
               <button
+                aria-expanded={openIndex === index}
+                aria-controls={"faq-answer-" + index}
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full text-left p-6 bg-cream rounded-2xl hover:bg-cream-200 transition-colors"
               >
@@ -87,6 +89,7 @@ export default function FAQ() {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
+                      id={"faq-answer-" + index}
                       className="overflow-hidden"
                     >
                       <p className="pt-4 text-navy/60 leading-relaxed">

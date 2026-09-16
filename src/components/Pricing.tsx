@@ -1,36 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Sparkles } from "lucide-react";
+import { Check } from "lucide-react";
 
 const plans = [
   {
     name: "Free",
     planLabel: "No subscription needed",
-    description: "Perfect for getting started with Bible study",
+    description: "Keep Scripture close, with everyday essentials",
     features: [
-      "Bible reading and search",
-      "Dramatised Bible listening",
-      "Personal journal and bookmarks",
+      "Full Bible text (multiple translations)",
+      "Basic search and bookmarks",
+      "Personal journal",
+      "Free dramatised Audio Bible",
       "Reading plans",
-      "Scripture memory flashcards",
     ],
-    cta: "See iPhone availability",
+    cta: "Check Availability",
     popular: false,
   },
   {
     name: "Apollos Pro",
     planLabel: "Monthly or yearly",
-    description: "Go further with Ask Apollos, Voice Bible, and Sermon Transcriber",
+    description: "Optional subscription for listening, study and sermon tools",
     features: [
       "Everything in Free, plus:",
-      "Ask Apollos for Scripture questions",
-      "Voice Bible narration in your own voice",
+      "Voice Bible with your cloned voice",
       "20 Voice Minutes per month",
       "480 sermon-transcription minutes per month",
+      "Ask Apollos study assistant",
       "Sermon transcripts and summaries",
+      "Chapter summaries",
+
     ],
-    cta: "See iPhone availability",
+    cta: "Check Availability",
     popular: true,
   },
 ];
@@ -54,10 +56,10 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Choose Your <span className="text-gold">Plan</span>
+            Choose Your <span className="text-gold">Experience</span>
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Subscription options and local pricing are shown in the app before you subscribe.
+            Free essentials or Apollos Pro. Subscription options and local pricing are shown in the app before you subscribe.
           </p>
         </motion.div>
 
@@ -77,8 +79,7 @@ export default function Pricing() {
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 px-4 py-1.5 bg-gold text-white text-sm font-semibold rounded-full">
-                  <Sparkles size={14} />
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 px-4 py-1.5 bg-gold text-navy text-sm font-semibold rounded-full">
                   Apollos Pro
                 </div>
               )}
@@ -114,10 +115,10 @@ export default function Pricing() {
               </ul>
 
               <a
-                href="/#download"
+                href="#download"
                 className={`block w-full py-4 text-center font-semibold rounded-xl transition-all ${
                   plan.popular
-                    ? "bg-gold hover:bg-gold-600 text-white hover:shadow-lg hover:shadow-gold/25"
+                    ? "bg-gold hover:bg-gold-600 text-navy hover:shadow-lg hover:shadow-gold/25"
                     : "bg-white/10 hover:bg-white/20 text-white border border-white/20"
                 }`}
               >
@@ -127,13 +128,11 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-white/80 text-sm leading-relaxed max-w-3xl mx-auto mt-8">
-          Eligible subscribers can start with a 3-day free trial: 25 Ask Apollos questions,
-          30 total sermon-transcription minutes, and a Psalm 23 cloned-voice preview.
-          Paid Pro allowances begin after the trial. Subscriptions renew unless cancelled;
-          check eligibility, included allowances, and renewal terms in the app before subscribing.
-        </p>
-
+        <div className="max-w-4xl mx-auto mt-10 text-white/85 space-y-3">
+          <h3 className="text-2xl text-white">A 3-day trial for eligible users</h3>
+          <p>The trial includes 25 Ask Apollos questions, 30 total sermon-transcription minutes and a Psalm 23 cloned-voice preview. Paid Pro allowances begin after the trial.</p>
+          <p>Subscriptions renew unless cancelled. Check eligibility, local pricing and renewal terms in the app and on the store confirmation screen before purchase.</p>
+        </div>
         {/* Operator identity */}
         <motion.p
           initial={{ opacity: 0 }}

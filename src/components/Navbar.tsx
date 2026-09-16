@@ -51,17 +51,19 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="/#download"
-              className="inline-flex items-center px-5 py-2.5 bg-gold hover:bg-gold-600 text-white font-semibold rounded-full transition-all hover:shadow-lg hover:shadow-gold/25"
+              className="inline-flex items-center px-5 py-2.5 bg-gold hover:bg-gold-600 text-navy font-semibold rounded-full transition-all hover:shadow-lg hover:shadow-gold/25"
             >
-              Get Apollos
+              Availability
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-navy"
+            className="md:hidden p-2 min-w-11 min-h-11 text-navy"
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -75,7 +77,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-cream border-b border-navy/5"
+            id="mobile-navigation" className="md:hidden bg-cream border-b border-navy/5"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
@@ -91,9 +93,9 @@ export default function Navbar() {
               <Link
                 href="/#download"
                 onClick={() => setIsOpen(false)}
-                className="inline-flex items-center px-5 py-2.5 bg-gold hover:bg-gold-600 text-white font-semibold rounded-full transition-all w-full justify-center mt-4"
+                className="inline-flex items-center px-5 py-2.5 bg-gold hover:bg-gold-600 text-navy font-semibold rounded-full transition-all w-full justify-center mt-4"
               >
-                Get Apollos
+                Availability
               </Link>
             </div>
           </motion.div>

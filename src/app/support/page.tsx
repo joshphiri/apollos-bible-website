@@ -10,11 +10,11 @@ export const metadata = {
 const faqs = [
   {
     question: "How do I get started with Apollos Bible?",
-    answer: "Apollos Bible is preparing for its iPhone launch. Once available, install the app, create an account, and explore the Bible reader. Open the Apollos tab for Ask Apollos; plan details and feature allowances are shown in the app.",
+    answer: "See the homepage for launch availability. Once the app is available to you, create an account to begin reading and exploring its features.",
   },
   {
     question: "What Bible translations are available?",
-    answer: "The reading library offers NIV, AMP, WEB, and KJV. Choose a translation in the Bible reader. WEB is available offline; other translations need an internet connection.",
+    answer: "Apollos Bible includes NIV, AMP, KJV, and WEB translations. You can switch between translations at any time while reading.",
   },
   {
     question: "How does Ask Apollos work?",
@@ -22,15 +22,15 @@ const faqs = [
   },
   {
     question: "How do I record and transcribe sermons?",
-    answer: "Open More > Sermon Transcriber and tap Record New Sermon. After recording, Apollos processes the audio into a transcript and summary. Processing needs an internet connection and available plan minutes. Record only content you have permission to record and process.",
+    answer: "Open Sermon Transcriber and choose Record New Sermon. With recording access and an internet connection for processing, a saved recording can be transcribed and summarised.",
   },
   {
-    question: "Where can I see subscription options and pricing?",
-    answer: "Subscription options and local pricing are shown in the app before you subscribe. Check the in-app plan details for included features, allowances and renewal terms.",
+    question: "What's included in Apollos Pro?",
+    answer: "Apollos Pro includes Voice Bible, Ask Apollos, sermon transcription and summaries, and chapter summaries. Paid allowances include 20 Voice Minutes and 480 sermon-transcription minutes per month. Subscription options and local pricing are shown in the app before you subscribe.",
   },
   {
     question: "Can I cancel my subscription?",
-    answer: "Manage or cancel your iPhone subscription in your Apple Account subscription settings. Access continues for the remaining subscription period. See the renewal terms Apple presents before you subscribe.",
+    answer: "Manage or cancel Apollos Pro through your Apple account settings. Access normally continues until the current subscription period ends.",
   },
   {
     question: "Is my data private?",
@@ -48,7 +48,7 @@ export default function SupportPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-navy-500 to-navy-600 text-white pt-28 lg:pt-32 pb-16">
+      <section className="bg-gradient-to-b from-navy-500 to-navy-600 text-white pt-32 pb-16 lg:pt-40">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">How Can We Help?</h1>
           <p className="text-xl text-navy-100">

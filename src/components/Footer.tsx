@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Apple } from "lucide-react";
+
 
 const footerLinks = {
   product: [
     { label: "Features", href: "/#features" },
     { label: "Plans", href: "/#pricing" },
     { label: "FAQ", href: "/#faq" },
-    { label: "iPhone availability", href: "/#download" },
+    { label: "Availability", href: "/#download" },
   ],
   company: [
+
     { label: "Support", href: "/support" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
@@ -38,18 +39,14 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-navy/60 mb-6 max-w-md">
-              Your companion for daily Scripture. Read, explore questions with Ask Apollos, listen in your own voice, and revisit your sermons.
+              Read Scripture, hear it in your own voice, explore Bible questions and keep the messages and reflections that matter.
             </p>
 
-            {/* Pre-launch availability */}
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="/#download"
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-navy hover:bg-navy-600 text-white rounded-lg transition-all text-sm"
-              >
-                <Apple size={20} />
-                <span>Coming soon to iPhone</span>
-              </a>
+            {/* Store links remain absent until public availability is verified. */}
+            <div id="download" className="space-y-2 text-navy/80">
+              <h3 className="font-semibold text-lg">Preparing for launch</h3>
+              <p>Public download links will be added when availability is confirmed.</p>
+              <a href="/support" className="inline-block underline underline-offset-4">Contact Apollos Support</a>
             </div>
           </div>
 
@@ -88,12 +85,15 @@ export default function Footer() {
           </div>
         </div>
 
+        <p className="mt-10 text-xs text-navy/70 leading-relaxed">
+          3D phone: <a className="underline" href="https://sketchfab.com/3d-models/iphone-16-pro-96be8c7e49fa4f949855db3e7f2e64e0" target="_blank" rel="noopener noreferrer">Iphone 16 Pro</a> by <a className="underline" href="https://sketchfab.com/tranminhluan" target="_blank" rel="noopener noreferrer">tranminhluan</a>, <a className="underline" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Screen adapted for Apollos.
+        </p>
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-navy/5 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-navy/40 text-sm">
+          <p className="text-navy/70 text-sm">
             © {new Date().getFullYear()} Apollos Bible. All rights reserved.
           </p>
-          <p className="text-navy/30 text-xs">
+          <p className="text-navy/70 text-xs">
             Operated by Abundant Life Church
           </p>
         </div>

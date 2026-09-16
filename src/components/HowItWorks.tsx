@@ -1,25 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HelpCircle, Sparkles, ArrowRight } from "lucide-react";
+import { Mic, Headphones, ArrowRight } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    title: "Open Ask Apollos",
-    description: "Wonder about a passage? Simply ask in plain language. No need for complex searches or terminology.",
-    icon: HelpCircle,
+    title: "Record Your Voice",
+    description: "In Voice Bible, record a short sample of your own voice and follow the steps to create your voice.",
+    icon: Mic,
   },
   {
     number: "02",
-    title: "Explore the Answer",
-    description: "Read the explanation and Scripture references, then compare them with the passage. Responses can make mistakes, so use your own judgement.",
-    icon: Sparkles,
+    title: "Choose a Chapter",
+    description: "Choose a supported Bible chapter and generate a narration using your cloned voice.",
+    icon: Headphones,
   },
   {
     number: "03",
-    title: "Go Deeper",
-    description: "Explore related passages, write your reflections in your journal, and build a richer understanding over time.",
+    title: "Listen and Return",
+    description: "Listen to Scripture in a familiar voice. Return to saved narrations without using minutes to generate them again.",
     icon: ArrowRight,
   },
 ];
@@ -37,10 +37,10 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">
-            How It <span className="text-gold">Works</span>
+            The Bible, <span className="text-gold-700">in Your Own Voice</span>
           </h2>
           <p className="text-lg text-navy/60 max-w-2xl mx-auto">
-            Bring your questions about Scripture to Ask Apollos, then keep exploring the Bible for yourself.
+            Voice Bible brings a personal way to listen. Here is how to begin.
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ export default function HowItWorks() {
 
                 <div className="relative bg-white rounded-2xl p-8 shadow-lg shadow-navy/5 hover:shadow-xl transition-shadow">
                   {/* Step number */}
-                  <div className="absolute -top-4 left-6 px-3 py-1 bg-gold text-white text-sm font-bold rounded-full">
+                  <div className="absolute -top-4 left-6 px-3 py-1 bg-gold text-navy text-sm font-bold rounded-full">
                     {step.number}
                   </div>
 
@@ -94,10 +94,10 @@ export default function HowItWorks() {
           className="text-center mt-16"
         >
           <a
-            href="/#download"
+            href="#download"
             className="inline-flex items-center gap-2 px-8 py-4 bg-navy hover:bg-navy-600 text-white font-semibold rounded-full transition-all hover:shadow-xl hover:shadow-navy/20"
           >
-            See iPhone availability
+            Explore Plans & Availability
             <ArrowRight size={20} />
           </a>
         </motion.div>

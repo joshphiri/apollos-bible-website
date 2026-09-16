@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, MessageSquareText, AudioLines, Mic, NotebookPen, Brain } from "lucide-react";
+import { BookOpen, MessageSquareText, Headphones, Mic, NotebookPen, Brain } from "lucide-react";
 
 const features = [
   {
     icon: BookOpen,
     title: "Bible Reader",
-    description: "Beautiful, distraction-free reading experience with multiple translations at your fingertips.",
+    description: "Read NIV, KJV, WEB and AMP. Highlight, bookmark and add notes to passages, or listen to the free dramatised Audio Bible.",
     color: "bg-navy/10 text-navy",
   },
   {
@@ -17,27 +17,27 @@ const features = [
     color: "bg-gold/20 text-gold-700",
   },
   {
-    icon: AudioLines,
+    icon: Headphones,
     title: "Voice Bible",
-    description: "Create a voice profile from your own recording and hear Scripture narrated in your voice. Save generated chapters in your library.",
+    description: "Record your own voice sample, create narration for supported Bible chapters, and return to saved narrations without generating them again.",
     color: "bg-navy/10 text-navy",
   },
   {
     icon: Mic,
     title: "Sermon Transcriber",
-    description: "Record sermons and return to their transcripts, summaries, and key points in your sermon library.",
+    description: "Record a sermon, read its transcript and summary, and return to the messages you want to remember.",
     color: "bg-gold/20 text-gold-700",
   },
   {
     icon: NotebookPen,
     title: "Journal & Bookmarks",
-    description: "Capture your reflections, highlight meaningful verses, and organize your spiritual journey.",
+    description: "Keep personal reflections in your journal, save meaningful passages and create verse cards to share.",
     color: "bg-navy/10 text-navy",
   },
   {
     icon: Brain,
     title: "Scripture Memory",
-    description: "Practise Scripture with flashcards and build a regular habit of remembering God's Word.",
+    description: "Practice Scripture memory and use reading plans to build a rhythm of returning to the Word.",
     color: "bg-gold/20 text-gold-700",
   },
 ];
@@ -74,12 +74,12 @@ export default function Features() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">
-            Everything You Need for
+            Make Scripture Part of
             <br />
-            <span className="text-gold">Deeper Bible Study</span>
+            <span className="text-gold-700">Your Everyday</span>
           </h2>
           <p className="text-lg text-navy/60 max-w-2xl mx-auto">
-            Powerful tools designed to help you understand, memorize, and apply Scripture to your daily life.
+            Read, listen, ask, record and reflect—with tools for the moments that make up your day.
           </p>
         </motion.div>
 
