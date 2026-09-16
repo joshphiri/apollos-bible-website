@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, MessageSquareText, Search, Mic, NotebookPen, Brain } from "lucide-react";
+import { BookOpen, MessageSquareText, AudioLines, Mic, NotebookPen, Brain } from "lucide-react";
 
 const features = [
   {
@@ -12,20 +12,20 @@ const features = [
   },
   {
     icon: MessageSquareText,
-    title: "AI Study Assistant",
-    description: "Ask questions about any passage and receive thoughtful, theologically-grounded insights instantly.",
+    title: "Ask Apollos",
+    description: "Ask about a verse, passage, or biblical word. Explore explanations and Scripture references to support your own study.",
     color: "bg-gold/20 text-gold-700",
   },
   {
-    icon: Search,
-    title: "Concordance & Dictionary",
-    description: "Explore original Hebrew and Greek meanings with comprehensive word studies and cross-references.",
+    icon: AudioLines,
+    title: "Voice Bible",
+    description: "Create a voice profile from your own recording and hear Scripture narrated in your voice. Save generated chapters in your library.",
     color: "bg-navy/10 text-navy",
   },
   {
     icon: Mic,
-    title: "Sermon Notes",
-    description: "Record and transcribe sermons, then link insights directly to related Scripture passages.",
+    title: "Sermon Transcriber",
+    description: "Record sermons and return to their transcripts, summaries, and key points in your sermon library.",
     color: "bg-gold/20 text-gold-700",
   },
   {
@@ -37,7 +37,7 @@ const features = [
   {
     icon: Brain,
     title: "Scripture Memory",
-    description: "Memorize verses with spaced repetition and track your progress over time.",
+    description: "Practise Scripture with flashcards and build a regular habit of remembering God's Word.",
     color: "bg-gold/20 text-gold-700",
   },
 ];

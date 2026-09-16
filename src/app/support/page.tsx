@@ -10,35 +10,35 @@ export const metadata = {
 const faqs = [
   {
     question: "How do I get started with Apollos Bible?",
-    answer: "Download the app from the App Store or Google Play, create an account, and start exploring! The AI study assistant is available to help you understand any passage.",
+    answer: "Apollos Bible is preparing for its iPhone launch. Once available, install the app, create an account, and explore the Bible reader. Open the Apollos tab for Ask Apollos; plan details and feature allowances are shown in the app.",
   },
   {
     question: "What Bible translations are available?",
-    answer: "Apollos Bible includes ESV, NIV, KJV, and WEB translations. You can switch between translations at any time while reading.",
+    answer: "The reading library offers NIV, AMP, WEB, and KJV. Choose a translation in the Bible reader. WEB is available offline; other translations need an internet connection.",
   },
   {
-    question: "How does the AI study assistant work?",
-    answer: "Simply tap the chat icon while reading any passage and ask your question. The AI draws from concordances, dictionaries, lexicons, and commentaries to provide scholarly insights.",
+    question: "How does Ask Apollos work?",
+    answer: "Open the Apollos tab and ask about a verse, passage, or biblical word. Ask Apollos provides explanations and Scripture references to support your study. Responses can make mistakes; compare them with Scripture and trusted study resources. Access and usage allowances are shown in the app.",
   },
   {
     question: "How do I record and transcribe sermons?",
-    answer: "Go to the Sermons tab, tap Record, and start capturing. When finished, your sermon will be automatically transcribed with AI-powered notes and key points.",
+    answer: "Open More > Sermon Transcriber and tap Record New Sermon. After recording, Apollos processes the audio into a transcript and summary. Processing needs an internet connection and available plan minutes. Record only content you have permission to record and process.",
   },
   {
-    question: "What's included in the Premium subscription?",
-    answer: "Premium ($12/month) includes unlimited AI conversations, sermon transcription minutes, advanced study tools, and sync across all your devices.",
+    question: "Where can I see subscription options and pricing?",
+    answer: "Subscription options and local pricing are shown in the app before you subscribe. Check the in-app plan details for included features, allowances and renewal terms.",
   },
   {
     question: "Can I cancel my subscription?",
-    answer: "Yes, you can cancel anytime through your App Store or Google Play account settings. You'll continue to have access until the end of your billing period.",
+    answer: "Manage or cancel your iPhone subscription in your Apple Account subscription settings. Access continues for the remaining subscription period. See the renewal terms Apple presents before you subscribe.",
   },
   {
     question: "Is my data private?",
-    answer: "Absolutely. Your sermon recordings stay on your device, and all data is encrypted. We never share your personal information with third parties for marketing. See our Privacy Policy for details.",
+    answer: "Sermon audio is stored on your device and sent for transcription when you use sermon processing. Transcripts and summaries can sync to your account. Ask Apollos and Voice Bible also use service providers to deliver their features. See our Privacy Policy for processing and retention details.",
   },
   {
     question: "How do I delete my account?",
-    answer: "Go to Settings > Account > Delete Account. This will permanently remove all your data from our servers.",
+    answer: "Open Settings and choose Delete Account, then follow the confirmation steps. Review the Privacy Policy for deletion and retention details. If you also have an Apple subscription, manage it separately in your Apple Account settings.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function SupportPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-navy-500 to-navy-600 text-white py-16">
+      <section className="bg-gradient-to-b from-navy-500 to-navy-600 text-white pt-28 lg:pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">How Can We Help?</h1>
           <p className="text-xl text-navy-100">

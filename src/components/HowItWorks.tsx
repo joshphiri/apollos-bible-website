@@ -6,20 +6,20 @@ import { HelpCircle, Sparkles, ArrowRight } from "lucide-react";
 const steps = [
   {
     number: "01",
-    title: "Ask a Question",
+    title: "Open Ask Apollos",
     description: "Wonder about a passage? Simply ask in plain language. No need for complex searches or terminology.",
     icon: HelpCircle,
   },
   {
     number: "02",
-    title: "Get Instant Insights",
-    description: "Receive thoughtful, theologically-grounded answers with relevant cross-references and context.",
+    title: "Explore the Answer",
+    description: "Read the explanation and Scripture references, then compare them with the passage. Responses can make mistakes, so use your own judgement.",
     icon: Sparkles,
   },
   {
     number: "03",
     title: "Go Deeper",
-    description: "Explore related passages, save insights to your journal, and build a richer understanding over time.",
+    description: "Explore related passages, write your reflections in your journal, and build a richer understanding over time.",
     icon: ArrowRight,
   },
 ];
@@ -40,7 +40,7 @@ export default function HowItWorks() {
             How It <span className="text-gold">Works</span>
           </h2>
           <p className="text-lg text-navy/60 max-w-2xl mx-auto">
-            Studying the Bible has never been easier. Here&apos;s how Apollos helps you grow.
+            Bring your questions about Scripture to Ask Apollos, then keep exploring the Bible for yourself.
           </p>
         </motion.div>
 
@@ -94,10 +94,10 @@ export default function HowItWorks() {
           className="text-center mt-16"
         >
           <a
-            href="#download"
+            href="/#download"
             className="inline-flex items-center gap-2 px-8 py-4 bg-navy hover:bg-navy-600 text-white font-semibold rounded-full transition-all hover:shadow-xl hover:shadow-navy/20"
           >
-            Start Your Journey
+            See iPhone availability
             <ArrowRight size={20} />
           </a>
         </motion.div>

@@ -2,17 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Apple, PlayCircle } from "lucide-react";
+import { Apple } from "lucide-react";
 
 const footerLinks = {
   product: [
-    { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Download", href: "#download" },
+    { label: "Features", href: "/#features" },
+    { label: "Plans", href: "/#pricing" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "iPhone availability", href: "/#download" },
   ],
   company: [
-    { label: "About", href: "/about" },
     { label: "Support", href: "/support" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
@@ -39,24 +38,17 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-navy/60 mb-6 max-w-md">
-              Your AI-powered Bible study companion. Deeper understanding, personalized insights, and tools to transform your time in Scripture.
+              Your companion for daily Scripture. Read, explore questions with Ask Apollos, listen in your own voice, and revisit your sermons.
             </p>
 
-            {/* App Store Buttons */}
+            {/* Pre-launch availability */}
             <div className="flex flex-wrap gap-3">
               <a
-                href="#"
+                href="/#download"
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-navy hover:bg-navy-600 text-white rounded-lg transition-all text-sm"
               >
                 <Apple size={20} />
-                <span>App Store</span>
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-navy hover:bg-navy-600 text-white rounded-lg transition-all text-sm"
-              >
-                <PlayCircle size={20} />
-                <span>Google Play</span>
+                <span>Coming soon to iPhone</span>
               </a>
             </div>
           </div>

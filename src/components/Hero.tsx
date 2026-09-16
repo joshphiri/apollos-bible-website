@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Apple, PlayCircle } from "lucide-react";
+import { Apple, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -30,7 +30,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 rounded-full text-gold-700 text-sm font-medium mb-6"
             >
               <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-              AI-Powered Bible Study
+              Ask Apollos
             </motion.div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6">
@@ -40,40 +40,27 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl text-navy/70 mb-8 max-w-xl mx-auto lg:mx-0">
-              Your intelligent Bible study companion. Get instant insights, explore cross-references, and deepen your understanding of God&apos;s Word with AI-powered tools.
+              Read Scripture, explore questions with Ask Apollos, hear the Bible in your own voice, and revisit the lessons from your sermons.
             </p>
 
-            {/* App Store Buttons */}
-            <div id="download" className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-navy hover:bg-navy-600 text-white rounded-xl transition-all hover:shadow-xl hover:shadow-navy/20 group"
+            {/* Pre-launch availability; no placeholder store links. */}
+            <div id="download" className="scroll-mt-24 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+              <div
+                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-navy text-white rounded-xl"
               >
-                <Apple size={24} />
+                <Apple size={24} aria-hidden="true" />
                 <div className="text-left">
-                  <div className="text-xs text-white/70">Download on the</div>
-                  <div className="font-semibold">App Store</div>
+                  <div className="text-xs text-white/70">Coming soon to</div>
+                  <div className="font-semibold">iPhone</div>
                 </div>
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-navy hover:bg-navy-600 text-white rounded-xl transition-all hover:shadow-xl hover:shadow-navy/20 group"
-              >
-                <PlayCircle size={24} />
-                <div className="text-left">
-                  <div className="text-xs text-white/70">Get it on</div>
-                  <div className="font-semibold">Google Play</div>
-                </div>
-              </a>
-            </div>
-
-            {/* Trust indicators */}
-            <div className="flex items-center gap-6 justify-center lg:justify-start text-sm text-navy/60">
-              <div className="flex items-center gap-1">
-                <span className="text-gold">★★★★★</span>
-                <span>5.0 Rating</span>
               </div>
-              <div>10K+ Downloads</div>
+              <a
+                href="/#features"
+                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-navy hover:bg-navy-600 text-white rounded-xl transition-all hover:shadow-xl hover:shadow-navy/20 group"
+              >
+                <span className="font-semibold">Explore features</span>
+                <ArrowRight size={20} aria-hidden="true" />
+              </a>
             </div>
           </motion.div>
 

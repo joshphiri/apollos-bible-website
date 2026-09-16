@@ -7,27 +7,27 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     question: "What Bible translations are available?",
-    answer: "Apollos Bible includes ESV, NIV, KJV, NASB, NLT, and more. You can easily switch between translations while reading, and even compare multiple versions side-by-side.",
+    answer: "The reading library offers NIV, AMP, WEB, and KJV. Choose a translation in the Bible reader. WEB is available offline; other translations need an internet connection.",
   },
   {
-    question: "How does the AI study assistant work?",
-    answer: "Our AI is trained on trusted theological resources and commentaries. Ask any question about a passage, and it will provide thoughtful, doctrinally-sound insights along with relevant cross-references. It's like having a seminary professor in your pocket.",
+    question: "How does Ask Apollos work?",
+    answer: "Open the Apollos tab and ask about a verse, passage, or biblical word. Ask Apollos provides explanations and Scripture references to support your study. Responses can make mistakes; compare them with Scripture and trusted study resources. Access and usage allowances are shown in the app.",
   },
   {
     question: "Is my data private and secure?",
-    answer: "Absolutely. Your notes, highlights, and conversations are encrypted and stored securely. We never sell your data or share it with third parties. Your spiritual journey remains private.",
+    answer: "Some features send questions, voice recordings, or sermon audio to service providers so they can respond, generate narration, or transcribe. Read our Privacy Policy for details about collection, processing, storage, and account deletion. Avoid including sensitive personal information in questions or recordings.",
   },
   {
     question: "Can I use Apollos Bible offline?",
-    answer: "Yes! Premium subscribers can download Bible translations and their notes for offline access. Perfect for quiet retreats or areas with limited connectivity.",
+    answer: "The WEB Bible is available offline. Voice Bible chapters saved on your device can be replayed offline. Ask Apollos, new voice narration, sermon processing, and Dramatised Bible streaming require an internet connection.",
   },
   {
     question: "What makes Apollos different from other Bible apps?",
-    answer: "Apollos combines the depth of traditional study tools with modern AI capabilities. We focus on theological accuracy, beautiful design, and features that help you not just read, but truly understand and apply Scripture.",
+    answer: "Read Scripture, explore questions with Ask Apollos, hear the Bible in your own voice with Voice Bible, and revisit sermons through transcripts and summaries. Reading plans, a personal journal, bookmarks, and memory flashcards support your daily study.",
   },
   {
     question: "Can I cancel my subscription anytime?",
-    answer: "Yes, you can cancel your Premium subscription at any time. You'll continue to have access until the end of your billing period, and your data (notes, highlights, etc.) will always remain accessible on the free plan.",
+    answer: "Manage or cancel your iPhone subscription in your Apple Account subscription settings. Access continues for the remaining subscription period. See the renewal terms Apple presents before you subscribe.",
   },
 ];
 

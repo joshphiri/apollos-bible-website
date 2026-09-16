@@ -16,13 +16,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Apollos Bible - Study Scripture Like Never Before",
-  description: "Your AI-powered Bible study companion. Deep insights, instant answers, and personalized study tools to transform your time in Scripture.",
-  keywords: ["Bible app", "Bible study", "AI Bible", "Scripture", "Christian app"],
+  description: "Read Scripture, explore questions with Ask Apollos, hear the Bible in your own voice, and revisit sermon transcripts and summaries.",
+  keywords: ["Bible app", "Bible study", "Ask Apollos", "Voice Bible", "Scripture", "Christian app"],
   openGraph: {
     title: "Apollos Bible - Study Scripture Like Never Before",
-    description: "Your AI-powered Bible study companion with deep insights and personalized study tools.",
+    description: "Read Scripture, explore questions with Ask Apollos, and hear the Bible in your own voice.",
     type: "website",
-    url: "https://apollosbible.com",
+    url: "https://apolloslifebible.com",
   },
 };
 

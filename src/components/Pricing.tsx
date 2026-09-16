@@ -6,35 +6,31 @@ import { Check, Sparkles } from "lucide-react";
 const plans = [
   {
     name: "Free",
-    price: "$0",
-    period: "forever",
+    planLabel: "No subscription needed",
     description: "Perfect for getting started with Bible study",
     features: [
-      "Full Bible text (multiple translations)",
-      "Basic search and bookmarks",
-      "Personal journal",
-      "5 AI questions per day",
+      "Bible reading and search",
+      "Dramatised Bible listening",
+      "Personal journal and bookmarks",
       "Reading plans",
+      "Scripture memory flashcards",
     ],
-    cta: "Download Free",
+    cta: "See iPhone availability",
     popular: false,
   },
   {
-    name: "Premium",
-    price: "$12",
-    period: "/month",
-    description: "Unlock the full power of AI-assisted study",
+    name: "Apollos Pro",
+    planLabel: "Monthly or yearly",
+    description: "Go further with Ask Apollos, Voice Bible, and Sermon Transcriber",
     features: [
       "Everything in Free, plus:",
-      "Unlimited AI conversations",
-      "Advanced concordance & dictionary",
-      "Sermon transcription",
-      "Scripture memory tools",
-      "Cross-reference explorer",
-      "Offline access",
-      "Priority support",
+      "Ask Apollos for Scripture questions",
+      "Voice Bible narration in your own voice",
+      "20 Voice Minutes per month",
+      "480 sermon-transcription minutes per month",
+      "Sermon transcripts and summaries",
     ],
-    cta: "Start Free Trial",
+    cta: "See iPhone availability",
     popular: true,
   },
 ];
@@ -58,10 +54,10 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Simple, Transparent <span className="text-gold">Pricing</span>
+            Choose Your <span className="text-gold">Plan</span>
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Start free and upgrade when you&apos;re ready. Cancel anytime.
+            Subscription options and local pricing are shown in the app before you subscribe.
           </p>
         </motion.div>
 
@@ -83,7 +79,7 @@ export default function Pricing() {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 px-4 py-1.5 bg-gold text-white text-sm font-semibold rounded-full">
                   <Sparkles size={14} />
-                  Most Popular
+                  Apollos Pro
                 </div>
               )}
 
@@ -97,11 +93,8 @@ export default function Pricing() {
               </div>
 
               <div className="mb-8">
-                <span className={`font-display text-5xl font-bold ${plan.popular ? "text-navy" : "text-white"}`}>
-                  {plan.price}
-                </span>
-                <span className={`${plan.popular ? "text-navy/60" : "text-white/60"}`}>
-                  {plan.period}
+                <span className={`font-display text-3xl font-bold ${plan.popular ? "text-navy" : "text-white"}`}>
+                  {plan.planLabel}
                 </span>
               </div>
 
@@ -121,7 +114,7 @@ export default function Pricing() {
               </ul>
 
               <a
-                href="#download"
+                href="/#download"
                 className={`block w-full py-4 text-center font-semibold rounded-xl transition-all ${
                   plan.popular
                     ? "bg-gold hover:bg-gold-600 text-white hover:shadow-lg hover:shadow-gold/25"
@@ -133,6 +126,13 @@ export default function Pricing() {
             </motion.div>
           ))}
         </div>
+
+        <p className="text-center text-white/80 text-sm leading-relaxed max-w-3xl mx-auto mt-8">
+          Eligible subscribers can start with a 3-day free trial: 25 Ask Apollos questions,
+          30 total sermon-transcription minutes, and a Psalm 23 cloned-voice preview.
+          Paid Pro allowances begin after the trial. Subscriptions renew unless cancelled;
+          check eligibility, included allowances, and renewal terms in the app before subscribing.
+        </p>
 
         {/* Operator identity */}
         <motion.p

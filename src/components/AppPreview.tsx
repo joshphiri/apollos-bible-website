@@ -16,7 +16,7 @@ const screenshots = [
   },
   {
     src: "/images/screenshots/sermons.jpg",
-    title: "Sermon Recording",
+    title: "Sermon Transcriber",
     description: "Record and transcribe automatically",
   },
   {

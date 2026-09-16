@@ -7,10 +7,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "#features", label: "Features" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#features", label: "Features" },
+  { href: "/#how-it-works", label: "How It Works" },
+  { href: "/#pricing", label: "Plans" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
@@ -50,10 +50,10 @@ export default function Navbar() {
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
             <Link
-              href="#download"
+              href="/#download"
               className="inline-flex items-center px-5 py-2.5 bg-gold hover:bg-gold-600 text-white font-semibold rounded-full transition-all hover:shadow-lg hover:shadow-gold/25"
             >
-              Download Free
+              Get Apollos
             </Link>
           </div>
 
@@ -89,11 +89,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="#download"
+                href="/#download"
                 onClick={() => setIsOpen(false)}
                 className="inline-flex items-center px-5 py-2.5 bg-gold hover:bg-gold-600 text-white font-semibold rounded-full transition-all w-full justify-center mt-4"
               >
-                Download Free
+                Get Apollos
               </Link>
             </div>
           </motion.div>
